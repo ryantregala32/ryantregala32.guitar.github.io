@@ -125,7 +125,7 @@
       <img src= "https://media.guitarcenter.com/is/image/MMGS7/M01775000001000-02-600x600.jpg" alt="Fender California Kingman Acoustic-Electric Bass Guitar Shaded Edge Burst Image">
       <p>Price: $599.99</p>
       <p>Category: Acoustic Bass</p>
-      <button onclick="removeItem(this);">Remove</button>
+<!--       <button onclick="removeItem(this);">Remove</button> -->
   </div>
 </div>
 <script src="scripts1.js"></script>
@@ -160,12 +160,12 @@
       const category = document.createElement("p");
       category.textContent = "Category: " + instrument.category;
 
-      const removeButton = document.createElement("button");
-      removeButton.textContent = "Remove";
-      // Add an event listener to call removeInstrument function with the index
-      removeButton.addEventListener("click", function() {
-        removeInstrument(i);
-      });
+      // const removeButton = document.createElement("button");
+      // removeButton.textContent = "Remove";
+      // // Add an event listener to call removeInstrument function with the index
+      // removeButton.addEventListener("click", function() {
+      //   removeInstrument(i);
+      // });
 
       cardContent.appendChild(title);
       cardContent.appendChild(image);
