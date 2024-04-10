@@ -145,10 +145,14 @@ function searchByName() {
     const searchInput = document.getElementById('search-input').value.toLowerCase();
     const searchResults = catalog.filter(item => item.name.toLowerCase().includes(searchInput));
     if (searchResults.length > 0) {
-        displayCatalog(searchResults);
+        displayInstruments(searchResults);
     } else {
         alert('No items found matching your search.');
     }
+}
+    function removeLastCard() {
+    instruments.pop(); // Remove last item in titles array
+    displayInstruments(); // Call showCards again to refresh
 }
     // Loop through each instrument in the instruments array
     for (let i = 0; i < instruments.length; i++) {
