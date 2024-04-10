@@ -115,6 +115,10 @@ function searchInstruments() {
         instrumentContainer.textContent = "No instruments found matching your search.";
     }
 }
+function removeInstrument(index) {
+    instruments.splice(index, 1);
+    displayInstruments();
+}
 
 // Display instruments when the page is loaded
 document.addEventListener("DOMContentLoaded", displayInstruments);
