@@ -166,19 +166,11 @@ function displayInstruments() {
         const category = document.createElement("p");
         category.textContent = "Category: " + instrument.category;
 
-        const removeButton = document.createElement("button");
-        removeButton.textContent = "Remove";
-        
-        // Add an event listener to the remove button
-        removeButton.addEventListener("click", function() {
-            removeInstrument(i);
-        });
 
         cardContent.appendChild(title);
         cardContent.appendChild(image);
         cardContent.appendChild(price);
         cardContent.appendChild(category);
-        cardContent.appendChild(removeButton);
 
         card.appendChild(cardContent);
 
