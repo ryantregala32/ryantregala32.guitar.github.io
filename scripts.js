@@ -129,17 +129,18 @@ function createInstrumentCard(instrument) {
 
     return card;
 }
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
+function shuffleInstruments() {
+    for (let i = instruments.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        [instruments[i], instruments[j]] = [instruments[j], instruments[i]];
     }
+    showCatalog();
 }
 // Function to display instruments
 function displayInstruments() {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
- shuffleArray(instruments);
+ shuffleInstruments(instruments);
 
     // Loop through each instrument in the instruments array
     for (let i = 0; i < instruments.length; i++) {
