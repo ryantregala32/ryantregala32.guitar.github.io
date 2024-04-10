@@ -167,6 +167,12 @@
       cardContainer.appendChild(card);
     }
   }
+     <div class="footer">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button onclick="searchByName();">Search</button>
+        <button onclick="shuffleInstruments();">Shuffle Instruments</button>
+        <button onclick="resetCatalog();">Reset</button>
+    </div>
 
   // Call the displayInstruments function when the page is first loaded
   document.addEventListener("DOMContentLoaded", displayInstruments);
