@@ -141,7 +141,15 @@ function displayInstruments() {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
  shuffleInstruments(instruments);
-
+function searchByName() {
+    const searchInput = document.getElementById('search-input').value.toLowerCase();
+    const searchResults = catalog.filter(item => item.name.toLowerCase().includes(searchInput));
+    if (searchResults.length > 0) {
+        displayCatalog(searchResults);
+    } else {
+        alert('No items found matching your search.');
+    }
+}
     // Loop through each instrument in the instruments array
     for (let i = 0; i < instruments.length; i++) {
         const instrument = instruments[i];
