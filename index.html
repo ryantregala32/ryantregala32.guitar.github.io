@@ -17,7 +17,7 @@
     <input type="text" id="search-input" placeholder="Search by name...">
     <button onclick="searchInstruments();">Search</button>
 </div>
-
+<button onclick="shuffleInstruments();">Shuffle Instruments</button>
 <div class="card-container" id="instrument-container">
     <!-- Instruments will be dynamically added here -->
     <div class="card">
@@ -178,7 +178,7 @@
       cardContainer.appendChild(card);
     }
   }
-<button onclick="shuffleInstruments();">Shuffle Instruments</button>
+
   // Call the displayInstruments function when the page is first loaded
   document.addEventListener("DOMContentLoaded", displayInstruments);
 </script>
