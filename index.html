@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitars and Basses Catalog</title>
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
+    <script src="scripts1.js" defer></script>
 </head>
 <body>
 
@@ -69,5 +69,118 @@
     </div>
 </div>
 
+<div class="card">
+  <div class="card-content">
+      <h2>Gibson Hummingbird Standard Acoustic-Electric Guitar Vintage Sunburst</h2>
+      <img src="https://media.guitarcenter.com/is/image/MMGS7/L28130000002000-02-600x600.jpg" alt="Gibson Hummingbird Standard Acoustic-Electric Guitar Vintage Sunburst Image">
+      <p>Price: $3999.00</p>
+      <p>Category: Acoustic Electric</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+      <h2>Gibson SG Standard '61 Electric Guitar Vintage Cherry</h2>
+      <img src="https://media.guitarcenter.com/is/image/MMGS7/L54585000001000-02-600x600.jpg" alt="Gibson SG Standard '61 Electric Guitar Vintage Cherry Image">
+      <p>Price: $1999.00</p>
+      <p>Category: Electric</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+      <h2>EVH Striped Series 5150 - Red, Black and White</h2>
+      <img src="https://waltgracevintage.com/cdn/shop/products/IMG_1222.jpg?v=1653768810" alt="EVH Striped Series 5150 - Red, Black, White Image">
+      <p>Price: $1749.99</p>
+      <p>Category: Electric</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+      <h2>Hofner Ignition Series Short-Scale Violin Bass Guitar Sunburst</h2>
+      <img src="https://media.guitarcenter.com/is/image/MMGS7/L81864000001000-02-600x600.jpg" alt="Hofner Ignition Series Short-Scale Violin Bass Guitar Sunburst Image">
+      <p>Price: $449.99</p>
+      <p>Category: Bass</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+      <h2>Gretsch Guitars G5422TG Electromatic Classic Hollowbody Double-Cut With Bigsby and Gold Hardware Electric Guitar Snow Crest White</h2>
+      <img src= "https://media.guitarcenter.com/is/image/MMGS7/L88824000003000-02-600x600.jpg" alt="Gretsch Guitars G5422TG Electromatic Classic Hollowbody Double-Cut With Bigsby and Gold Hardware Electric Guitar Snow Crest White Image">
+      <p>Price: $449.99</p>
+      <p>Category: Bass</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+      <h2>Fender California Kingman Acoustic-Electric Bass Guitar Shaded Edge Burst</h2>
+      <img src= "https://media.guitarcenter.com/is/image/MMGS7/M01775000001000-02-600x600.jpg" alt="Fender California Kingman Acoustic-Electric Bass Guitar Shaded Edge Burst Image">
+      <p>Price: $599.99</p>
+      <p>Category: Acoustic Bass</p>
+      <button onclick="removeItem(this);">Remove</button>
+  </div>
+</div>
+<script src="scripts1.js"></script>
+
+<script>
+  // Function to display instruments
+  function displayInstruments() {
+    const cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = "";
+
+    // Loop through each instrument in the instruments array
+    for (let i = 0; i < instruments.length; i++) {
+      const instrument = instruments[i];
+
+      // Create HTML elements for the instrument card
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      const cardContent = document.createElement("div");
+      cardContent.classList.add("card-content");
+
+      const title = document.createElement("h2");
+      title.textContent = instrument.name;
+
+      const image = document.createElement("img");
+      image.src = instrument.imageURL;
+      image.alt = instrument.name + " Image";
+
+      const price = document.createElement("p");
+      price.textContent = "Price: $" + instrument.price.toFixed(2);
+
+      const category = document.createElement("p");
+      category.textContent = "Category: " + instrument.category;
+
+      const removeButton = document.createElement("button");
+      removeButton.textContent = "Remove";
+      // Add an event listener to call removeInstrument function with the index
+      removeButton.addEventListener("click", function() {
+        removeInstrument(i);
+      });
+
+      cardContent.appendChild(title);
+      cardContent.appendChild(image);
+      cardContent.appendChild(price);
+      cardContent.appendChild(category);
+      cardContent.appendChild(removeButton);
+
+      card.appendChild(cardContent);
+
+      cardContainer.appendChild(card);
+    }
+  }
+
+  // Call the displayInstruments function when the page is first loaded
+  document.addEventListener("DOMContentLoaded", displayInstruments);
+</script>
 </body>
 </html>
