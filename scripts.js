@@ -134,7 +134,7 @@ function shuffleInstruments() {
         const j = Math.floor(Math.random() * (i + 1));
         [instruments[i], instruments[j]] = [instruments[j], instruments[i]];
     }
-    showCatalog();
+    displayInstruments();
 }
 // Function to display instruments
 function displayInstruments() {
