@@ -129,13 +129,6 @@ function createInstrumentCard(instrument) {
 
     return card;
 }
-function shuffleInstruments() {
-    for (let i = instruments.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [instruments[i], instruments[j]] = [instruments[j], instruments[i]];
-    }
-    displayInstruments();
-}
 // Function to display instruments
 function displayInstruments() {
     const cardContainer = document.getElementById("card-container");
@@ -149,6 +142,13 @@ function searchByName() {
     } else {
         alert('No items found matching your search.');
     }
+}
+    function shuffleInstruments() {
+    for (let i = instruments.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [instruments[i], instruments[j]] = [instruments[j], instruments[i]];
+    }
+    displayInstruments();
 }
     function removeLastCard() {
     instruments.pop(); // Remove last item in titles array
