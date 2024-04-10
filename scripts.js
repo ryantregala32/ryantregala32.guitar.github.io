@@ -129,11 +129,17 @@ function createInstrumentCard(instrument) {
 
     return card;
 }
-
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
 // Function to display instruments
 function displayInstruments() {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
+ shuffleArray(instruments);
 
     // Loop through each instrument in the instruments array
     for (let i = 0; i < instruments.length; i++) {
