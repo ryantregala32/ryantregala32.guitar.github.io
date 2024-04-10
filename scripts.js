@@ -27,7 +27,7 @@
 // scripts1.js
 
 // Define instrument data
-const instruments = [
+let instruments = [
     { 
         name: "Yamaha F325D Dreadnought Acoustic Guitar",
         category: "guitar",
